@@ -1,0 +1,31 @@
+  <h3>Create Book</h3>
+
+  <%= form_for(@book) do  |f| %>
+    
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :description %>
+    <%= f.number_field :description %>
+  </div>
+
+  <div class="field">
+    <%= f.label :user_id %>
+    <%= f.number_field :user_id %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+
+<p>
+  <%= link_to "Back", users_path %>
+</p>  
+
+<!-- <p>
+  <%= link_to "Back", users_path %>
+</p>   -->

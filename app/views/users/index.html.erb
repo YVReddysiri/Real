@@ -1,0 +1,81 @@
+<h3>Users</h3>
+  <table>
+    <thead>
+      <tr>
+   	  <td>Name</td>
+   	  <td>Email</td>
+   	  <td>City</td>
+   	  <td>Country</td>  	
+   	</tr>	
+    </thead>
+    <tbody>
+      <% @users.each do |user| %>
+   	  <tr>
+   	    <td><%= user.name %></td>
+   	    <td><%= user.email %></td>
+   	  	 <td><%= user.city %></td>
+   	  	 <td><%= user.country %></td>
+   	  	 <td><%= link_to 'Show', user %></td>
+          <td><%= link_to 'Edit', edit_user_path(user) %></td>
+          <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+   	  	</tr>
+   	<% end %>  
+   </tbody>
+   </table>
+ <br></br>
+
+<%= link_to 'New User', new_user_path %>
+
+<br></br>
+
+
+<h3>Books</h3>
+  <table>
+    <thead>
+      <tr>
+        <td>Name</td>
+   	  <td>Description</td>
+   	</tr>	
+    </thead>
+    <tbody>
+      <% @books.each do |book| %>
+   	  <tr>
+   	    <td><%= book.name %></td>
+   	  	 <td><%= book.description %></td>
+   	  	 <td><%= link_to 'Show', book %></td>
+          <td><%= link_to 'Edit', edit_book_path(book) %></td>
+          <td><%= link_to 'Destroy', book, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+   	  </tr>
+   	<% end %>  
+    </tbody>
+   </table>
+ <br></br>
+
+<%= link_to 'New Book', new_book_path %>
+
+
+<h3>Products</h3>
+  <table>
+    <thead>
+      <tr>
+        <td>Name</td>
+        <td>Description</td>
+      </tr>  
+    </thead>
+    <tbody>
+      <% @products.each do |product| %>
+        <tr>
+          <td><%= product.name %></td>
+          <td><%= product.description %></td>
+          <td><%= link_to 'Show', product %></td>
+          <td><%= link_to 'Edit', edit_product_path(product) %></td>
+          <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+         </tr>
+      <% end %>  
+    </tbody>
+  </table>
+  <br></br>
+
+<%= link_to 'New Product', new_product_path %>
+
+

@@ -1,0 +1,35 @@
+<h3>Details</h3>
+<p>
+  Name: <%= @book.name %>
+</p> 
+
+<p>
+  Email: <%= @book.description %>
+  	
+</p>
+
+<p>
+  user_id: <%= @book.user_id %>
+  	
+</p>
+
+<p>
+   <%= link_to "Back", users_path %>
+</p>
+
+<p>
+  <%= link_to "Create Book", new_book_path %>
+</p>
+
+<p>
+  <%= link_to "Edit Book", edit_book_path(@book) %>
+</p>  
+
+
+
+<h1> details </h1>
+ <p> Name : <%= @book.name %> </p>
+ <p> city :<%= @book.description %></p>
+ <p> <%= link_to "back",users_path %></p>
+ <p> <%= link_to "create book" ,new_book_path %></p>
+ <p> <%= link_to "edit books" ,new_book_path %></p>

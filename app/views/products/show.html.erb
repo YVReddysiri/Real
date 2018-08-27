@@ -1,0 +1,33 @@
+<h3>Details</h3>
+<p>
+  Name: <%= @product.name %>
+</p> 
+
+<p>
+  Description: <%= @product.description %>
+  	
+</p>
+
+<p>
+  user_id: <%= @product.user_id %>
+</p>  
+
+<p>
+   <%= link_to "Back", products_path %>
+</p>
+
+<p>
+  <%= link_to "Create Product", new_product_path %>
+</p>
+
+<p>
+  <%= link_to "Edit Product", edit_product_path(@product) %>
+</p>  
+
+
+<h1> details </h1>
+ <p> Name : <%= @product.name %> </p>
+ <p> city :<%= @product.description %></p>
+ <p> <%= link_to "back",users_path %></p>
+ <p> <%= link_to "create product" ,new_product_path %></p>
+ <p> <%= link_to "edit products" ,new_product_path %></p>
